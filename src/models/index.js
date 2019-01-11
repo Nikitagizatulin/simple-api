@@ -1,6 +1,7 @@
+require('dotenv').config()
 const fs = require('fs')
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/api')
+mongoose.connect(`mongodb://localhost/${process.env.DB_NAME || 'api'}`, { useNewUrlParser: true })
 const dbs = {
   mongoose
 }

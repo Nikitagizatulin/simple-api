@@ -6,7 +6,7 @@ module.exports = (app) => {
 
   app.get('/artists',
     ArtistsController.index)
-  app.post('/artists',
+  app.post('/artist',
     ArtistsController.store)
   app.get('/artist/:id',
     ArtistsController.show)
